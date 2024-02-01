@@ -10,8 +10,19 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^4.3.0",
     "@astrojs/check": "^0.4.1",
+    "@astrojs/svelte": "^5.0.3",
+    "@astrojs/tailwind": "^5.1.0",
+    "astro": "^4.3.0",
+    "cloudinary": "^2.0.0",
+    "openai": "^4.26.0",
+    "svelte": "^4.2.9",
+    "svelte-file-dropzone": "^2.0.4",
+    "tailwindcss": "^3.4.1",
     "typescript": "^5.3.3"
+  },
+  "devDependencies": {
+    "flowbite": "^2.2.1",
+    "flowbite-svelte": "^0.44.22"
   }
 }
