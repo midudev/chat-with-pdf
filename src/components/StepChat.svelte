@@ -5,6 +5,7 @@
 
   let answer = ""
   let loading = false
+  let conversation = []
 
   const numOfImagesToShow = Math.min(pages, 4)
   const images = Array.from({ length: numOfImagesToShow }, (_, i) => {
@@ -32,7 +33,9 @@
         loading = false
         const incomingData = JSON.parse(event.data)
 
-        if (incomingData === "__END__") {
+        if (incomingData === '__END__') {
+          conversation.unshift({ question, answer })
+          conversation = conversation.slice(0, 5)
           eventSource.close()
           return
         }
@@ -70,9 +73,13 @@
   </div>
 {/if}
 
-{#if answer}
-  <div class="mt-8">
-    <p class="font-medium">Respuesta:</p>
-    <p>{answer}</p>
-  </div>
-{/if}
+<div class="mt-8 max-h-[40vh] pb-8 px-1 overflow-y-auto overflow-x-hidden flex flex-col gap-8">
+  {#each conversation as { question, answer }}
+    <article class="grid grid-cols-10 w-full gap-y-4 [&>p]:rounded-lg">
+      <p class="flex col-start-1 col-end-8 w-full backdrop-blur-sm p-4 shadow-lg shadow-cyan-300">{answer}</p>
+      <p class="justify-end flex col-start-4 col-end-11 w-full backdrop-blur-sm p-4 shadow-lg shadow-cyan-300">
+        {question}
+      </p>
+    </article>
+  {/each}
+</div>
