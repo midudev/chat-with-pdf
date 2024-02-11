@@ -19,3 +19,9 @@ pnpm-debug.log*
 
 # macOS-specific files
 .DS_Store
+
+# Packages
+package-lock.json
+
+# Idles
+.idea
