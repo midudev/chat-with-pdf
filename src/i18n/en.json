@@ -1,0 +1,13 @@
+{
+  "H1": "Chat with your PDF",
+  "PLACEHOLDER_DRAG": "Drag your PDF here",
+  "SOMETHING_WENT_WRONG": "Something went wrong!",
+  "ERROR_IN_APPLICATION": "Error in application",
+  "UPLOADING": "Uploading file and extracting text...",
+  "LABEL_TEXT": "Leave here your question",
+  "INPUT_PLACEHOLDER": "What do you want to know?",
+  "AWAITING_RESPONSE": "Awaiting response",
+  "RESPONSE": "Response:",
+  "UNKNOWN_ACTION": "Unknown action",
+  "UNKNOWN_APPLICATION_STATE": "Unknown application state"
+}

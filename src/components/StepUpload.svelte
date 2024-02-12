@@ -1,4 +1,5 @@
 <script>
+  export let i18n;
   import {
     setAppStatusLoading,
     setAppStatusError,
@@ -43,7 +44,7 @@
   <Dropzone
     accept="application/pdf"
     multiple={false}
-    on:drop={handleFilesSelect}>Arrastra y suelta aquí tu PDF</Dropzone
+    on:drop={handleFilesSelect}>{i18n.PLACEHOLDER_DRAG}</Dropzone
   >
 {/if}
 

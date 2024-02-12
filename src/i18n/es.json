@@ -1,0 +1,13 @@
+{
+  "H1": "Interactúa con tu PDF",
+  "PLACEHOLDER_DRAG": "Arrastra y suelta aquí tu PDF",
+  "SOMETHING_WENT_WRONG": "¡Algo malo ha pasado!",
+  "ERROR_IN_APPLICATION": "Ha habido un error en la aplicación",
+  "UPLOADING": "Subiendo el archivo y extrayendo el texto...",
+  "LABEL_TEXT": "Deja aquí tu pregunta",
+  "INPUT_PLACEHOLDER": "¿De qué trata este documento?",
+  "AWAITING_RESPONSE": "Esperando respuesta...",
+  "RESPONSE": "Respuesta:",
+  "UNKNOWN_ACTION": "Acción no reconocida",
+  "UNKNOWN_APPLICATION_STATE": "Este estado de la aplicación no está reconocido"
+}

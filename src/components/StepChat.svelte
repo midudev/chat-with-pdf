@@ -1,4 +1,5 @@
 <script>
+  export let i18n;
   import { Input, Label, Spinner } from "flowbite-svelte"
   import { appStatusInfo, setAppStatusError } from "../store"
   const { url, pages, id } = $appStatusInfo
@@ -58,21 +59,21 @@
 </div>
 
 <form class="mt-8" on:submit={handleSubmit}>
-  <Label for="question" class="block mb-2">Deja aquí tu pregunta</Label>
-  <Input id="question" required placeholder="¿De qué trata este documento?"
+  <Label for="question" class="block mb-2">{i18n.LABEL_TEXT}</Label>
+  <Input id="question" required placeholder={`${i18n.INPUT_PLACEHOLDER}`}
   ></Input>
 </form>
 
 {#if loading}
   <div class="mt-10 flex justify-center items-center flex-col gap-y-2">
     <Spinner />
-    <p class="opacity-75">Esperando respuesta...</p>
+    <p class="opacity-75">{i18n.AWAITING_RESPONSE}</p>
   </div>
 {/if}
 
 {#if answer}
   <div class="mt-8">
-    <p class="font-medium">Respuesta:</p>
+    <p class="font-medium">{i18n.RESPONSE}</p>
     <p>{answer}</p>
   </div>
 {/if}
