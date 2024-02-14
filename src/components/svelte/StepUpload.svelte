@@ -1,9 +1,10 @@
 <script>
+  export let i18n;
   import {
     setAppStatusLoading,
     setAppStatusError,
     setAppStatusChatMode,
-  } from "../store.ts"
+  } from "../../store.ts"
   import Dropzone from "svelte-file-dropzone"
 
   let files = {
@@ -43,7 +44,7 @@
   <Dropzone
     accept="application/pdf"
     multiple={false}
-    on:drop={handleFilesSelect}>Arrastra y suelta aquí tu PDF</Dropzone
+    on:drop={handleFilesSelect}>{i18n.PLACEHOLDER_DRAG}</Dropzone
   >
 {/if}
 

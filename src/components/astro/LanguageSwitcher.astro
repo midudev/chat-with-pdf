@@ -1,0 +1,29 @@
+---
+import Spain from '@components/astro/flags/Spain.astro';
+import UnitedStates from '@components/astro/flags/UnitedStates.astro';
+import { getRelativeLocaleUrl } from 'astro:i18n';
+import { LANGUAGES } from '../../i18n/';
+
+interface Props {
+    currentLocale: string,
+}
+
+const { currentLocale } = Astro.props;
+const selectors = Object.values(LANGUAGES).filter((lang) =>{
+    if (lang !== currentLocale) {
+        return lang;
+    }
+});
+---
+<div id="language-switcher" class="absolute top-0 right-0 block w-fit group shadow-inner shadow-white/30 border rounded backdrop-blur">
+    <span class="uppercase flex items-center px-5 py-2.5 gap-x-2.5">{currentLocale === 'es' ? <Spain /> : <UnitedStates />} {currentLocale}</span>
+    <ul class="overflow-hidden max-h-[0] [transition:max-height_0.3s_ease-in-out] group-hover:max-h-screen w-full">
+        { selectors.map((selector) => (
+                <li class="text-center bg-[#C9EBFF]/30 hover:bg-[#C9EBFF] transition duration-300 py-2.5 text-center">
+                    <a class="uppercase flex items-center gap-x-2.5 w-fit mx-auto" href={getRelativeLocaleUrl(selector)}>
+                        {selector === 'es' ? <Spain /> : <UnitedStates />} {selector}
+                    </a>
+                </li>
+        )) }
+    </ul>
+</div>
