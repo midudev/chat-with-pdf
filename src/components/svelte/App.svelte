@@ -1,7 +1,7 @@
 <script>
   export let i18n;
   import { Alert } from "flowbite-svelte"
-  import { APP_STATUS, appStatus } from "../store.ts"
+  import { APP_STATUS, appStatus } from "../../store.ts"
   import StepUpload from "./StepUpload.svelte"
   import StepLoading from "./StepLoading.svelte"
   import StepChat from "./StepChat.svelte"

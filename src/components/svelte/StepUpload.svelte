@@ -4,7 +4,7 @@
     setAppStatusLoading,
     setAppStatusError,
     setAppStatusChatMode,
-  } from "../store.ts"
+  } from "../../store.ts"
   import Dropzone from "svelte-file-dropzone"
 
   let files = {
